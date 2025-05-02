@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
+
 const pages = [
     {name : 'Home', path: '/'},
     {name : 'Drawings', path: '/DrawingList'},
@@ -20,25 +21,22 @@ const pages = [
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static"
+    elevation={0}
+    sx={{
+      backgroundColor: 'transparent',
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -57,7 +55,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            We care about artists.
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -126,7 +124,6 @@ function NavBar() {
               </Button>
             ))}
           </Box>
-
         </Toolbar>
       </Container>
     </AppBar>

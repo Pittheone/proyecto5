@@ -12,7 +12,7 @@ import {
   import React, { useEffect, useState } from 'react';
   import { Link } from 'react-router-dom';
   
-  const API_URL = 'https://nekos.best/api/v2/neko?amount=3';
+  const API_URL = 'https://nekos.best/api/v2/neko?amount=6';
   
   export default function DrawingList() {
     const [waifus, setWaifus] = useState([]);
@@ -38,10 +38,11 @@ import {
     return (
       <Grid container spacing={3} justifyContent="center" sx={{ padding: '30px' }}>
         {waifus.map((waifu, id) => (
-          <Grid key={id}>
+          <Grid key={id}
+          xs={12} sm={6} md={4}>
             <Card
               sx={{
-                width: 400,
+                width: { xs: 200, sm: 250, md: 400 },
                 borderRadius: '16px', // Bordes redondeados
                 boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', // Sombra suave
                 transition: 'transform 0.3s ease', // Efecto de transición para hover
@@ -55,7 +56,7 @@ import {
                 to={`/DrawingList/${id}`}
                 state={{ drawing: waifu }}
               >
-                <Box sx={{ height: 300, overflow: 'hidden' }}>
+                <Box sx={{ height: { xs: 200, sm: 250, md: 300 }, overflow: 'hidden' }}>
                   <CardMedia
                     component="img"
                     image={waifu.url}
