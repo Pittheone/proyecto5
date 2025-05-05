@@ -9,10 +9,9 @@ const DrawingDetail = () => {
 
   useEffect(() => {
     if (drawing) {
-      // Simula un pequeño retraso de carga
       const timer = setTimeout(() => {
         setIsLoading(false);
-      }, 1000); // puedes ajustar el tiempo o quitarlo si no lo necesitas
+      }, 1000); 
 
       return () => clearTimeout(timer);
     }
