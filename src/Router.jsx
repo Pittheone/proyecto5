@@ -4,6 +4,7 @@ import App from "./App";
 
 import Layout from "./components/Layout";
 import DrawingDetail from "./pages/DrawingDetail";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 
 const router = createBrowserRouter([
@@ -11,9 +12,9 @@ const router = createBrowserRouter([
         path: '/',
         element: <Layout />,
         children: [
-            {path: '/', element: <App />},
-            {path: '/DrawingList', element: <DrawingList />},
-            {path: '/DrawingList/:name', element: <DrawingDetail />},
+            {path: '/', element: (<ErrorBoundary> <App /> </ErrorBoundary>)},
+            {path: '/DrawingList', element: (<ErrorBoundary> <DrawingList /> </ErrorBoundary>) },
+            {path: '/DrawingList/:name', element: (<ErrorBoundary> <DrawingDetail /> </ErrorBoundary>)},
         ]
     }
 ])

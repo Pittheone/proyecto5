@@ -1,12 +1,24 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Proyecto React + Vite Pedro Ascui
 
-Currently, two official plugins are available:
+Este es un proyecto donde tuvimos que aprender a utilizar React y Vite. Lo cual tiene lo siguiente:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-Una página de inicio (Home) que da la bienvenida al usuario.
 
-## Expanding the ESLint configuration
+-Una barra de navegación (Navbar) que permite acceder a una lista aleatoria de dibujos.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-Al hacer clic en una imagen, se muestra el dibujo ampliado en una vista detallada.
+
+-Las imágenes se obtienen gracias a la API de Nekos Best, que entrega imágenes aleatorias.
+
+# Importante:
+
+El .env no está subido, pues como se dijo en clases en información sensible. Para que funcione el proyecto se necesita un .env, con esta ruta:
+
+VITE_DRAIWINGS_API_URL=https://nekos.best/api/v2/neko?amount=6
+
+
+
+
+
+
